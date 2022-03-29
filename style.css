@@ -10,6 +10,9 @@ body{
     margin:0px;
     font-family:"Roboto",Verdana;
 }
+
+/*Header*/
+
 header {
     padding: 20px 0;
     box-shadow:0px 2px 3px  #ddd8d8; 
@@ -21,15 +24,48 @@ header {
     justify-content: center;
     align-items: center;
   }
+
+/*Localisation*/
+
   main .location {
     display:flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    background-color: #f5f4f4;
+    background-color: #f1eeee;
     font-size: 12px;
    
   }
   main .location i{
       font-size: 20px;
+  }
+
+/*Explorer*/
+  
+.Explorer {
+    text-align: center;
+    background-color: #f8f5f5;
+    padding: 40px 40px;
+    margin-bottom: 50px;
+} 
+.Explorer p {
+    font-size: large;
+
+}
+  .Explorer button{
+    color: white;
+    font-size: large;
+    padding:15px 20px;
+    border: none;
+    border-radius: 30px;
+    background-image : linear-gradient(to left top,#9356DC ,#FF79DA ); 
+    box-shadow: 1px 2px 9px 4px rgba(0,0,0,0.2)
+}
+.Explorer button:hover {
+    transform: scale(1, 1.1);
+}
+    
+  @media screen and (max-width : 768px)
+  {
+
   }
