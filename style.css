@@ -1,13 +1,14 @@
 /**police Logo et titre**/ 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 /**police texte**/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap');
 *{
     box-sizing: border-box;
     
 }
 body{
     margin:0px;
+    font-family:"Roboto",Verdana;
 }
 header {
     padding: 20px 0;
@@ -19,4 +20,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  main .location {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #f5f4f4;
+    font-size: 12px;
+   
+  }
+  main .location i{
+      font-size: 20px;
   }
