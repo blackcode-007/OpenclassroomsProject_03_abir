@@ -1,0 +1,22 @@
+/**police Logo et titre**/ 
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+/**police texte**/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap');
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    margin:0px;
+}
+header {
+    padding: 20px 0;
+    box-shadow:0px 2px 3px  #ddd8d8; 
+    position: relative; 
+  }
+  
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
