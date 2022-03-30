@@ -1,0 +1,22 @@
+{
+  "name": "openclassroomsproject_03",
+  "version": "1.0.0",
+  "description": "Projet_3 ohMyfood\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[O\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABIR-HACHANI/OpenclassroomsProject_03.git"
+  },
+  "author": "ABIR CHOUABI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ABIR-HACHANI/OpenclassroomsProject_03/issues"
+  },
+  "homepage": "https://github.com/ABIR-HACHANI/OpenclassroomsProject_03#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}
