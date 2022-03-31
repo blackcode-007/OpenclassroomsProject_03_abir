@@ -1,0 +1,14 @@
+/*Localisation*/
+
+.location {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #f1eeee;
+    font-size: 12px;
+    & i{
+      font-size: 20px;
+    }
+   
+  }

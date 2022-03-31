@@ -1,0 +1,26 @@
+@import "../utils/box-shadox.scss";
+@import "../utils/zoom.scss";
+/*Explorer*/
+.Explorer {
+    text-align: center;
+    background-color: #f8f5f5;
+    padding: 40px 40px;
+    margin-bottom: 50px;
+ 
+  & p {
+    font-size: large;
+
+  }
+  & button{
+    color: white;
+    font-size: large;
+    padding:15px 20px;
+    border: none;
+    border-radius: 30px;
+    background-image : linear-gradient(to left top,#9356DC ,#FF79DA ); 
+    @include shadow;
+    &:hover{
+      @include zoom;
+    }
+  }
+}

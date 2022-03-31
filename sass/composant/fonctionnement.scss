@@ -1,0 +1,51 @@
+@import "../utils/colors.scss";
+
+
+
+.function{
+    counter-reset: counter;
+
+    & ul{
+        display: flex;
+        gap:2rem;
+        list-style-type: none;
+        counter-reset: compteliste;
+        @media screen and (max-width :900px){
+        flex-direction: column;
+        }
+        & li{
+            position: relative;
+            &::before {
+                counter-increment: compteliste;
+                content: counter(compteliste);
+                width: 1rem;
+                height: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: white;
+                background-color: $purple;
+                padding: 0.5rem;
+                position:absolute;
+                bottom: 0.5rem;
+                left:-1rem;
+            }
+            flex-grow: 1;
+            background-color: #f6f6f6;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            @include shadow;
+            &:hover{
+                @include zoom;
+              }
+            & i.fas{
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                color:$grey;
+            }
+        }
+          
+    } 
+
+}
