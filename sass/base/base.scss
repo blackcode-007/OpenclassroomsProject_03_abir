@@ -1,12 +1,39 @@
 /**police Logo et titre**/ 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-/**police texte**/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap');
+
+/**police texte**/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
+
+::before,
 *{
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
 }
+
 body{
     margin:0px;
-    font-family:"Roboto",Verdana;
+    font-family:"Roboto";
+}
+
+h2{
+    font-size: x-large;
+    font-weight: bold;
+    padding:1Opx;
+    margin :18px 0;
+}
+h3 ,p{
+    font-size: small;
+    margin: 0;
+    
+}
+main{
+    margin: 20px; 
+    @media screen and(max-width:800px){
+        margin:0px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color:inherit;/*la couleur tu l'herite du parent*/
 }

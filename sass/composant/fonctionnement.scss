@@ -1,47 +1,74 @@
+/*Fonctionnement*/
+
 @import "../utils/colors.scss";
 
 
 
 .function{
+    margin: 15px;
     counter-reset: counter;
+    margin-bottom: 50px;
+    
+    padding: 10 20px ;
 
     & ul{
+        padding-left: 18px;
         display: flex;
         gap:2rem;
         list-style-type: none;
         counter-reset: compteliste;
-        @media screen and (max-width :900px){
+        @media screen and (max-width :908px){
         flex-direction: column;
+
+        padding-left: 5px;
+       
         }
         & li{
             position: relative;
+            font-weight: bold;
+            margin-bottom: 0px;
             &::before {
                 counter-increment: compteliste;
                 content: counter(compteliste);
-                width: 1rem;
-                height: 1rem;
+                width: 20px;
+                height: 20px;
                 display: flex;
+                font-size: x-small;
                 justify-content: center;
                 align-items: center;
                 border-radius: 50%;
                 color: white;
                 background-color: $purple;
-                padding: 0.5rem;
+                padding: 5px;
                 position:absolute;
-                bottom: 0.5rem;
-                left:-1rem;
+                bottom: 30%;
+                left: -5px;
+                @media all and (min-width:909px ) and (max-width : 992px  ){
+                 top: -7px;;
+                 left: 50%;
+                    
+                }
+                
             }
             flex-grow: 1;
             background-color: #f6f6f6;
             border-radius: 1rem;
             padding: 1rem 2rem;
+            @media all and (min-width:768px ) and (max-width : 992px  ){
+                padding: 16px 25px  ;
+            }
             @include shadow;
             &:hover{
                 @include zoom;
+                
+                background-color:#f8eef8;
+                i.fas{
+                    color:$purple;
+                }
               }
             & i.fas{
-                margin-right: 1rem;
-                font-size: 1.5rem;
+                padding-right: 18px;
+                font-size: 16px;
                 color:$grey;
             }
         }
