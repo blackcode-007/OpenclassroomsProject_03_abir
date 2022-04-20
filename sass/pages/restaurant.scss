@@ -1,0 +1,156 @@
+@import"../utils/animations.scss";
+
+main{
+    margin: 0;
+    background-color:rgba(249, 247, 247, 0.991);
+    
+}
+header{
+    position: relative;
+     i{
+        position:absolute;
+        display: flex; 
+        top:35%;
+        left:20px;  
+        font-weight: 12px;
+    } 
+}
+
+.restaurant{  
+    img {
+    width:100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block; 
+    }
+    .restaurant__name {
+        font-family: "shrikhand";
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px 15px 10px 20px  ;
+        border-radius: 30px 30px 0 0;
+        background-color:rgb(249, 247, 247);
+        margin-top: -30px;
+        position: relative;
+    }
+    .heart__icon{
+        .fill {
+            font-size:25px;
+            padding-right:10px;
+            cursor: pointer;
+            &:hover {
+            background-image : linear-gradient(to left top,#9356DC ,#FF79DA ); 
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            }
+        }
+    }
+}
+.menu{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    @media (max-width : 1000px){
+        grid-template-columns: repeat(1,1fr);
+        padding: 20px;
+        .menu_carte_item {
+            margin-bottom: 40px;
+           
+        }
+    }
+    .menu_carte_item {
+        h3{
+            position: relative;
+           &::after{
+               content: "";
+               height: 3px;
+               width: 35px;
+               left:0;
+               top:20px;
+               background-color:$check-bachground ;
+               position: absolute;
+            } 
+        }
+        
+        .card__item{
+            background-color: white;
+            margin: 25px 15px 15px 0px;
+            border-radius: 10px;
+            display: flex;
+            @include shadow;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;/***caché le check***/
+            
+            .card__description{
+                padding: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                
+                h4,p{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;   
+                }  
+            }
+            .card__price{
+                font-weight: bold;
+                margin-left: auto;
+                display: flex;
+                align-items: flex-end;
+                padding: 10px;
+                
+            }
+            .card__check{
+                background-color: $check-bachground;
+                width: 50px;
+                margin-right:-50px; 
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                transition: all 1s;
+                .fas{
+                    color: white;
+                }
+            }
+            
+           &:hover {
+               cursor: pointer;
+               .card__check{
+                   margin-right: 0px;
+               }
+               .card__description{
+                   width: 200px;
+               }
+               .fas{
+                    @include spin-check;
+                    animation: spin-check 1s;
+                    animation-play-state: running;
+                }
+           } 
+        }
+
+    }
+   padding: 30px;
+}
+.order{
+    text-align: center;
+    & button{
+        color: white;
+        font-size: small;
+        font-weight: bold;
+        padding: 15px 40px;
+        margin: 0px 0 30px 0;
+        border: none;
+        border-radius: 30px;
+        background-image : linear-gradient(to left top,#9356DC ,#FF79DA ); 
+        @include shadow;
+        &:hover{
+            @include zoom;
+        }
+    }
+}
