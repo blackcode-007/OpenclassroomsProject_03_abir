@@ -95,6 +95,50 @@ header .logo {
   transform: scale(1, 1.1);
 }
 
+.loader {
+  background-color: #f7f9fa;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  opacity: 0.8;
+  animation: disappear 1s;
+  animation-fill-mode: both;
+  /* .spin {
+     width: 80px;
+     height: 80px;
+   }
+   .spin:after {
+     content: " ";
+     display: block;
+     width: 64px;
+     height: 64px;
+     margin: 8px;
+     border-radius: 50%;
+     border: 6px solid #fff;
+     border-color: rgb(103, 119, 235) transparent #fff transparent;
+     animation: spin 1s linear 4 ;
+
+   }
+
+   @keyframes spin {
+     0% {
+       transform: rotate(0deg);
+     }
+     100% {
+       transform: rotate(360deg);
+     }
+   }*/
+}
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 /*Fonctionnement*/
 .function {
   margin: 15px;
@@ -259,6 +303,16 @@ footer ul li i {
   font-size: x-small;
 }
 
+@keyframes appearance {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 main {
   margin: 0;
   background-color: rgba(249, 247, 247, 0.991);
@@ -340,8 +394,24 @@ header i {
   text-overflow: ellipsis;
   white-space: nowrap;
   /***caché le check***/
+  animation: appearance 1s;
+  animation-fill-mode: both;
+}
+.menu .menu_carte_item .card__item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu .menu_carte_item .card__item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu .menu_carte_item .card__item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu .menu_carte_item .card__item:nth-child(4) {
+  animation-delay: 0.8s;
 }
 .menu .menu_carte_item .card__item .card__description {
+  width: 80%;
+  border: 1px solid black;
   padding: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -378,7 +448,7 @@ header i {
   margin-right: 0px;
 }
 .menu .menu_carte_item .card__item:hover .card__description {
-  width: 200px;
+  /*width: 200px;*/
 }
 .menu .menu_carte_item .card__item:hover .fas {
   animation: spin-check 1s;

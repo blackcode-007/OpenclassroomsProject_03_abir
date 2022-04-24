@@ -1,4 +1,6 @@
 @import"../utils/animations.scss";
+$anim-dur:1s;
+$anim-delay: $anim-dur / 5;
 
 main{
     margin: 0;
@@ -84,8 +86,17 @@ header{
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;/***caché le check***/
+            animation: appearance $anim-dur;
+            animation-fill-mode: both;
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $anim-delay * $i;
+                 }
+            }
             
             .card__description{
+                width: 80%;
+                border: 1px solid black;
                 padding: 10px;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -124,7 +135,7 @@ header{
                    margin-right: 0px;
                }
                .card__description{
-                   width: 200px;
+                   /*width: 200px;*/
                }
                .fas{
                     @include spin-check;
